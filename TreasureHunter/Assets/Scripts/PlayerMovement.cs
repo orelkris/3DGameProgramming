@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public static float m_player_speed = 20f;
     // Start is called before the first frame update
+    public static bool playerWin = false;
     void Start()
     {
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         // if player collides with the treasure, the player wins! Show "Win" screen
         if (this.GetComponent<Collider>().bounds.Contains(GameObject.Find("Treasure").transform.position))
         {
+            playerWin = true;
             Debug.Log("Win!");
         }
 
@@ -45,12 +47,12 @@ public class PlayerMovement : MonoBehaviour
         // player rotation
         if (Input.GetKey(KeyCode.E))
         {
-            this.transform.Rotate(new Vector3(0, 40 * m_player_speed * Time.deltaTime, 0));
+            this.transform.Rotate(new Vector3(0, 40 * Time.deltaTime, 0));
            
         }
         else if (Input.GetKey(KeyCode.Q))
         {
-            this.transform.Rotate(new Vector3(0, -40 * m_player_speed * Time.deltaTime, 0));
+            this.transform.Rotate(new Vector3(0, -40 * Time.deltaTime, 0));
         }
 
         // on every update, make sure the height of the player is always on the surface of the terrain
