@@ -8,6 +8,6 @@ public class StartButtonScript : MonoBehaviour
     public void LoadTerrain()
     {
         Debug.Log("Landscape Scene Loading");
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("TreasureHunter2");
     }
 }
