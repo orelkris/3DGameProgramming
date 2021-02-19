@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         if (this.GetComponent<Collider>().bounds.Contains(GameObject.Find("Treasure").transform.position))
         {
             playerWin = true;
-            Debug.Log("Win!");
+            SceneManager.LoadScene("Win");
         }
 
         // player movement

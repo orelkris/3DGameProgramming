@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Timer : MonoBehaviour
 
         if(Mathf.Round(timer) == 0 && PlayerMovement.playerWin == false)
         {
-            Debug.Log("You Lose");
+            SceneManager.LoadScene("Lose");
         }
 
         timerText.text = Mathf.Round(timer).ToString();
