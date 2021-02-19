@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TreasureHunter2.unity
+- path: Assets/Scenes/TreasureHunter.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
