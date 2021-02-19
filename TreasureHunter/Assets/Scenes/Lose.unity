@@ -184,7 +184,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -211,8 +211,8 @@ GameObject:
   - component: {fileID: 496096829}
   - component: {fileID: 496096828}
   - component: {fileID: 496096827}
-  - component: {fileID: 496096826}
   - component: {fileID: 496096825}
+  - component: {fileID: 496096826}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 496096824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc404d69ddd4844bb3a45f77a6aa5ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 517454b160994ea47bcf4e25ffced84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &496096827
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Play Again
 --- !u!222 &985186180
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -630,7 +630,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 496096826}
-        m_MethodName: ExitGameplay
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -812,7 +812,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: Back to Menu
 --- !u!222 &1569114848
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,15 +13,15 @@ public class Treasure : MonoBehaviour
     {
         // Find the terrain object
         GameObject terrain = GameObject.Find("Terrain");
-        
+
         // Get the size of the terrain object
         Vector3 size = terrain.GetComponent<Terrain>().terrainData.size;
-        
+
         // create a sphere object
         treasure = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
         // place the sphere at a random position within the bounds of the terrain
-        treasure.transform.position = new Vector3(Random.Range(50, size.x - 50), 0, Random.Range(50, size.z - 50));
+        treasure.transform.position = new Vector3(Random.Range(100, size.x - 200), 0, Random.Range(100, size.z - 200));
 
         // create a new vector
         Vector3 newPos = treasure.transform.position;
@@ -34,13 +34,11 @@ public class Treasure : MonoBehaviour
         treasure.transform.position = newPos;
 
         // make the size of the sphere larger
-        treasure.transform.localScale += new Vector3(10, 10, 10);
+        treasure.transform.localScale += new Vector3(15, 15, 15);
 
         // place the empty object where the new sphere is so that the player can collide with the treasure object to win
         this.transform.position = treasure.transform.position;
     }
-
-    // Update is called once per frame
     void Update()
     {
         // create a random float

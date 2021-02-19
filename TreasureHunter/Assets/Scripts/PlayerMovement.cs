@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static float m_player_speed = 20f;
+    public static float m_player_speed = 40f;
     // Start is called before the first frame update
     public static bool playerWin = false;
     void Start()
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         {
             movement += Vector3.forward;
         }
-        else if(Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             movement += Vector3.back;
         }
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             this.transform.Rotate(new Vector3(0, 40 * Time.deltaTime, 0));
-           
+
         }
         else if (Input.GetKey(KeyCode.Q))
         {

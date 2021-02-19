@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
 
         timer -= Time.deltaTime;
 
-        if(Mathf.Round(timer) == 0 && PlayerMovement.playerWin == false)
+        if (Mathf.Round(timer) == 0 && PlayerMovement.playerWin == false)
         {
             SceneManager.LoadScene("Lose");
         }
